@@ -6,8 +6,14 @@ $db = require __DIR__ . '/db.php';
 $config = [
 
 
-
     'modules' => [
+        //Файловы менджер и текстовый редакток TinyMice
+        'roxymce' => [
+            'class' => 'navatech\roxymce\Module',
+            'uploadFolder' => '@app/web/uploads/',
+            'uploadUrl' => $_SERVER['url'].'/web/uploads/',
+        ],
+
         'admin' => [
             'class' => 'app\modules\admin\Module',
             'layout' => 'main'
@@ -19,11 +25,11 @@ $config = [
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
     ],
     'components' => [
         'request' => [
-            'baseUrl'=> '',
+            'baseUrl' => '',
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'Z1UaHc6mu8gnbrMbDhSnTs3ZcHFJWJL6',
         ],
