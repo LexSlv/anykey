@@ -9,6 +9,11 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+//Для загрузки файлов
+use yii\web\UploadedFile;
+use yii\imagine\Image;
+
+
 /**
  * NewsController implements the CRUD actions for News model.
  */
@@ -65,7 +70,12 @@ class NewsController extends Controller
     public function actionCreate()
     {
         $model = new News();
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+
+            $model->image = UploadedFile::getInstance($model, 'image');
+            Image::resize($model->image->tempName, 400, null)->save('uploads/' . $model->image->baseName . '.' . $model->image->extension);
+            $model->save(false);
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -84,7 +94,11 @@ class NewsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+            Image::resize($model->image->tempName, 400, null)->save('uploads/' . $model->image->baseName . '.' . $model->image->extension);
+            $model->save(false);
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -102,8 +116,11 @@ class NewsController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        if(file_exists(Yii::$app->basePath . '/web/uploads/' . $this->findModel($id)->image)){
+            unlink(Yii::$app->basePath . '/web/uploads/' . $this->findModel($id)->image);
+        }
 
+        $this->findModel($id)->delete();
         return $this->redirect(['index']);
     }
 

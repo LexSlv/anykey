@@ -28,9 +28,10 @@ class News extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'image'], 'required'],
+            [['title'], 'required'],
             [['content'], 'string'],
             [['title', 'image'], 'string', 'max' => 255],
+            [['image'], 'file',  'extensions' => 'png, jpg'],
         ];
     }
 
