@@ -5,6 +5,9 @@ use yii\helpers\Html;
 /* @var $content string */
 
 
+
+
+
 if (Yii::$app->controller->action->id === 'login') { 
 /**
  * Do not use this code in your template. Remove it. 
@@ -36,6 +39,18 @@ if (Yii::$app->controller->action->id === 'login') {
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
+    <style>
+        table {
+            background-color: #fcfcfc;
+            margin-top:10px;
+            padding: 5px;
+        }
+
+        .content {
+            padding-top: 1px;
+        }
+
+    </style>
     <body class="hold-transition skin-blue sidebar-mini">
     <?php $this->beginBody() ?>
     <div class="wrapper">

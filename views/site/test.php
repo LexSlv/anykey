@@ -23,8 +23,9 @@ echo \navatech\roxymce\widgets\RoxyMceWidget::widget([
 
 <hr>
 
-<input type="text" id="fieldID2">
-<a class="btn btn-primary" data-toggle="modal" href="" data-target="#modal-id" data-remote="false">Trigger modal</a>
+<input type="text" id="fieldID2"><a class="btn btn-primary" data-toggle="modal" href="" data-target="#modal-id" data-remote="false">Trigger modal</a>
+
+
 <div class="modal modal-roxy fade" id="modal-id">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
