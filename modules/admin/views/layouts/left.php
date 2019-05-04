@@ -6,10 +6,18 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     //['label' => 'Menu:', 'options' => ['class' => 'header']],
+                    ['label' => 'Text blocks', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/text-blocks']],
+                    ['label' => 'Team', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/team']],
+                    ['label' => 'Meta', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/meta']],
+                    ['label' => 'Menu', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/menu']],
+                    ['label' => 'Locations', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/locations']],
+                    ['label' => 'Start page', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/start-pages']],
+                    /*
                     ['label' => 'News', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/news']],
                     ['label' => 'About', 'icon' => 'fas fa-feather', 'url' => ['/admin/news']],
                     ['label' => 'Contacts', 'icon' => 'fas fa-address-card', 'url' => ['/admin/news']],
                     ['label' => 'Settings', 'icon' => 'far fa-cogs', 'url' => ['/admin/news']],
+                    */
                     /*
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
