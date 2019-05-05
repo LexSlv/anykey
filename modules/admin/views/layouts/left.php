@@ -12,6 +12,8 @@
                     ['label' => 'Menu', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/menu']],
                     ['label' => 'Locations', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/locations']],
                     ['label' => 'Start page', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/start-pages']],
+                    ['label' => 'Works', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/works/']],
+                    ['label' => 'Works images', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/works-imgs/']],
                     /*
                     ['label' => 'News', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/news']],
                     ['label' => 'About', 'icon' => 'fas fa-feather', 'url' => ['/admin/news']],

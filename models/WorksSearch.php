@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Menu;
+use app\models\Works;
 
 /**
- * MenuSearch represents the model behind the search form of `app\models\Menu`.
+ * WorksSearch represents the model behind the search form of `app\models\Works`.
  */
-class MenuSearch extends Menu
+class WorksSearch extends Works
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class MenuSearch extends Menu
     public function rules()
     {
         return [
-            [['id', 'position'], 'integer'],
-            [['link_text', 'url'], 'safe'],
+            [['id'], 'integer'],
+            [['image', 'alias', 'title', 'description', 'key_words', 'team', 'videos', 'images'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class MenuSearch extends Menu
      */
     public function search($params)
     {
-        $query = Menu::find();
+        $query = Works::find();
 
         // add conditions that should always apply here
 
@@ -59,11 +59,16 @@ class MenuSearch extends Menu
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'position' => $this->position,
         ]);
 
-        $query->andFilterWhere(['like', 'link_text', $this->link_text])
-            ->andFilterWhere(['like', 'url', $this->url]);
+        $query->andFilterWhere(['like', 'image', $this->image])
+            ->andFilterWhere(['like', 'alias', $this->alias])
+            ->andFilterWhere(['like', 'title', $this->title])
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'key_words', $this->key_words])
+            ->andFilterWhere(['like', 'team', $this->team])
+            ->andFilterWhere(['like', 'videos', $this->videos])
+            ->andFilterWhere(['like', 'images', $this->images]);
 
         return $dataProvider;
     }

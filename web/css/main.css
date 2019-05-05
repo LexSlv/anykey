@@ -126,13 +126,16 @@ h1 {
 /* Menu Page */
 
 .menuBlock {
+    position: fixed;
+    background-color: black;
+    z-index: 9999;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
     max-width: 1920px;
     min-height: 400px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-flow: column;

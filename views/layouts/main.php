@@ -10,6 +10,9 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\models\Menu;
+
+$menu = Menu::find()->orderBy("position ASC")->all();
 
 AppAsset::register($this);
 ?>
@@ -29,10 +32,22 @@ AppAsset::register($this);
         'href' => 'css/main.css',
     ]); ?>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <?php $this->head() ?>
 </head>
 <body>
 <?php $this->beginBody() ?>
+
+<!-- <li class="active">works</li> -->
+<div class="menuBlock">
+    <ul>
+        <?php foreach ($menu as $menu_item): ?>
+            <li><a href="<?= $menu_item['url'] ?>"><?= $menu_item['link_text'] ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+
+
 <div class="container">
     <?php if (isset($this->params['background']) || $this->params['background'] != ""){ ?>
     <div class="mainPage" style="background-image: url(<?= $this->params['background'] ?>)">
@@ -57,6 +72,9 @@ AppAsset::register($this);
 
 
             <?= $content ?>
+
+
+
             <?php if(!$this->params['hide_footer']): ?>
             <div class="footerBlock">
                 <div class="footerIcons">

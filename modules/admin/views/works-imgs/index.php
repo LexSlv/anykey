@@ -4,18 +4,18 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\MenuSearch */
+/* @var $searchModel app\models\WorksImgsSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Menus';
+$this->title = 'Works Imgs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="menu-index">
+<div class="works-imgs-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Menu', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Works Imgs', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -27,9 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'link_text',
-            'url:url',
-            'position',
+            'img',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

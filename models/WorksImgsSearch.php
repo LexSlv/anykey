@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Menu;
+use app\models\WorksImgs;
 
 /**
- * MenuSearch represents the model behind the search form of `app\models\Menu`.
+ * WorksImgsSearch represents the model behind the search form of `app\models\WorksImgs`.
  */
-class MenuSearch extends Menu
+class WorksImgsSearch extends WorksImgs
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,7 @@ class MenuSearch extends Menu
     public function rules()
     {
         return [
-            [['id', 'position'], 'integer'],
-            [['link_text', 'url'], 'safe'],
+            [['id', 'img'], 'integer'],
         ];
     }
 
@@ -40,7 +39,7 @@ class MenuSearch extends Menu
      */
     public function search($params)
     {
-        $query = Menu::find();
+        $query = WorksImgs::find();
 
         // add conditions that should always apply here
 
@@ -59,11 +58,8 @@ class MenuSearch extends Menu
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'position' => $this->position,
+            'img' => $this->img,
         ]);
-
-        $query->andFilterWhere(['like', 'link_text', $this->link_text])
-            ->andFilterWhere(['like', 'url', $this->url]);
 
         return $dataProvider;
     }
