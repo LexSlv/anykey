@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Meta;
+use app\models\StartPage;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -15,6 +17,10 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
+
+    public $title;
+    public $description;
+
     public function behaviors()
     {
         return [
@@ -61,7 +67,18 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+
+        $start_page = StartPage::find()->where(['is_active'=>'1'])->orderBy('id DESC')->one();
+
+        $meta = Meta::find()->where(['alias'=>'index'])->one();
+        Yii::$app->view->params['title'] = $meta['title'];
+        Yii::$app->view->params['description'] = $meta['description'];
+        Yii::$app->view->params['keywords'] = $meta['key_words'];
+
+        Yii::$app->view->params['background'] = $start_page['background'];
+        Yii::$app->view->params['hide_footer'] = true;
+
+        return $this->render('index',['model'=>$start_page]);
     }
 
     /**

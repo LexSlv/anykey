@@ -4,13 +4,16 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Meta */
+/* @var $model app\models\meta */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="meta-form">
 
     <?php $form = ActiveForm::begin(); ?>
+
+    <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
+
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 

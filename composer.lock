@@ -1400,16 +1400,16 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.17",
+            "version": "2.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-framework.git",
-                "reference": "b56159228c3b4990e38cf41ddd69af27ab015bea"
+                "reference": "be563f0211bd5d4424680d0fcdef578090f08e41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/b56159228c3b4990e38cf41ddd69af27ab015bea",
-                "reference": "b56159228c3b4990e38cf41ddd69af27ab015bea",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/be563f0211bd5d4424680d0fcdef578090f08e41",
+                "reference": "be563f0211bd5d4424680d0fcdef578090f08e41",
                 "shasum": ""
             },
             "require": {
@@ -1496,25 +1496,28 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2019-03-22T21:26:26+00:00"
+            "time": "2019-04-23T12:48:26+00:00"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
-            "version": "2.0.9",
+            "version": "2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "4677951dda712dd99d5bf2a127eaee118dfea860"
+                "reference": "073c9ab0a4eb71f2485d84c96a1967130300d8fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/4677951dda712dd99d5bf2a127eaee118dfea860",
-                "reference": "4677951dda712dd99d5bf2a127eaee118dfea860",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/073c9ab0a4eb71f2485d84c96a1967130300d8fc",
+                "reference": "073c9ab0a4eb71f2485d84c96a1967130300d8fc",
                 "shasum": ""
             },
             "require": {
                 "bower-asset/bootstrap": "3.4.* | 3.3.* | 3.2.* | 3.1.*",
                 "yiisoft/yii2": "~2.0.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "<7"
             },
             "type": "yii2-extension",
             "extra": {
@@ -1556,7 +1559,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2019-01-29T21:39:45+00:00"
+            "time": "2019-04-23T13:18:43+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
@@ -1770,86 +1773,6 @@
                 "parser"
             ],
             "time": "2016-10-30T11:50:56+00:00"
-        },
-        {
-            "name": "bower-asset/jcrop",
-            "version": "v0.9.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tapmodo/Jcrop.git",
-                "reference": "1902fbc6afa14481dc019a17e0dcb7d62b808a98"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tapmodo/Jcrop/zipball/1902fbc6afa14481dc019a17e0dcb7d62b808a98",
-                "reference": "1902fbc6afa14481dc019a17e0dcb7d62b808a98",
-                "shasum": null
-            },
-            "type": "bower-asset"
-        },
-        {
-            "name": "bower-asset/simple-ajax-uploader",
-            "version": "2.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LPology/Simple-Ajax-Uploader.git",
-                "reference": "06c094a7d383a1e6643ab4c77716f01607489b54"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LPology/Simple-Ajax-Uploader/zipball/06c094a7d383a1e6643ab4c77716f01607489b54",
-                "reference": "06c094a7d383a1e6643ab4c77716f01607489b54",
-                "shasum": null
-            },
-            "type": "bower-asset",
-            "license": [
-                "MIT"
-            ]
-        },
-        {
-            "name": "budyaga/yii2-cropper",
-            "version": "2.0.20",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/krivochenko/yii2-cropper.git",
-                "reference": "bbd21b82c72f29ecca7cfe96dd719ee8e3643923"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/krivochenko/yii2-cropper/zipball/bbd21b82c72f29ecca7cfe96dd719ee8e3643923",
-                "reference": "bbd21b82c72f29ecca7cfe96dd719ee8e3643923",
-                "shasum": ""
-            },
-            "require": {
-                "bower-asset/jcrop": "=0.9.12",
-                "bower-asset/simple-ajax-uploader": "2.6.1",
-                "yiisoft/yii2": "*",
-                "yiisoft/yii2-imagine": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "budyaga\\cropper\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Sergey Krivochenko",
-                    "email": "budyaga@gmail.com"
-                }
-            ],
-            "description": "Yii-Framework widget for uploading and cropping images",
-            "keywords": [
-                "crop",
-                "extension",
-                "upload",
-                "yii2"
-            ],
-            "time": "2018-06-19T06:58:03+00:00"
         },
         {
             "name": "codeception/base",
@@ -2226,108 +2149,6 @@
             "time": "2018-12-04T20:46:45+00:00"
         },
         {
-            "name": "karpoff/yii2-crop-image-upload",
-            "version": "0.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/karpoff/yii2-crop-image-upload.git",
-                "reference": "42bc37832487d4b13de08b3f788856f8250f6ead"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/karpoff/yii2-crop-image-upload/zipball/42bc37832487d4b13de08b3f788856f8250f6ead",
-                "reference": "42bc37832487d4b13de08b3f788856f8250f6ead",
-                "shasum": ""
-            },
-            "require": {
-                "mongosoft/yii2-upload-behavior": "*",
-                "yiisoft/yii2": "*",
-                "yiisoft/yii2-imagine": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "karpoff\\icrop\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Anton Karpov",
-                    "email": "karpoff@bk.ru"
-                }
-            ],
-            "description": "Yii 2 Crop image upload widget",
-            "homepage": "https://github.com/karpoff/yii2-crop-image-upload",
-            "keywords": [
-                "crop",
-                "image",
-                "upload",
-                "yii2"
-            ],
-            "time": "2014-12-15T18:32:02+00:00"
-        },
-        {
-            "name": "mongosoft/yii2-upload-behavior",
-            "version": "0.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mohorev/yii2-upload-behavior.git",
-                "reference": "946439ccdfe7ae897621c8721c14e7088e7b2774"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mohorev/yii2-upload-behavior/zipball/946439ccdfe7ae897621c8721c14e7088e7b2774",
-                "reference": "946439ccdfe7ae897621c8721c14e7088e7b2774",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.0",
-                "yiisoft/yii2": "~2.0.0"
-            },
-            "require-dev": {
-                "phpunit/dbunit": "~1.0",
-                "phpunit/phpunit": "~4.0",
-                "yiisoft/yii2-imagine": "^2.1"
-            },
-            "suggest": {
-                "yiisoft/yii2-imagine": "Required to use thumbnails processing with UploadImageBehavior"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "mohorev\\file\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Mohorev",
-                    "email": "dev.mohorev@gmail.com"
-                }
-            ],
-            "description": "Upload behavior for Yii 2",
-            "homepage": "https://github.com/mohorev/yii2-upload-behavior",
-            "keywords": [
-                "Behavior",
-                "extension",
-                "file",
-                "image",
-                "resize",
-                "thumb",
-                "upload",
-                "yii2"
-            ],
-            "abandoned": "mohorev/yii2-upload-behavior",
-            "time": "2018-08-10T07:58:22+00:00"
-        },
-        {
             "name": "myclabs/deep-copy",
             "version": "1.9.1",
             "source": {
@@ -2533,16 +2354,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "94fd0001232e47129dd3504189fa1c7225010d08"
+                "reference": "bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94fd0001232e47129dd3504189fa1c7225010d08",
-                "reference": "94fd0001232e47129dd3504189fa1c7225010d08",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c",
+                "reference": "bdd9f737ebc2a01c06ea7ff4308ec6697db9b53c",
                 "shasum": ""
             },
             "require": {
@@ -2580,7 +2401,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-11-30T07:14:17+00:00"
+            "time": "2019-04-30T17:48:53+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -3214,49 +3035,6 @@
             "time": "2016-02-11T07:05:27+00:00"
         },
         {
-            "name": "sadovojav/yii2-image-cutter",
-            "version": "1.0.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sadovojav/yii2-image-cutter.git",
-                "reference": "401f9ec56ce6ab69bdf74566f3202b229969af9b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sadovojav/yii2-image-cutter/zipball/401f9ec56ce6ab69bdf74566f3202b229969af9b",
-                "reference": "401f9ec56ce6ab69bdf74566f3202b229969af9b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "yiisoft/yii2": "*",
-                "yiisoft/yii2-imagine": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "sadovojav\\cutter\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Aleksandr Sadovoj",
-                    "email": "sadovojav@gmail.com",
-                    "homepage": "https://github.com/sadovojav"
-                }
-            ],
-            "description": "Crop image widget.",
-            "keywords": [
-                "crop",
-                "cutter",
-                "image",
-                "upload",
-                "yii2"
-            ],
-            "time": "2015-06-12T17:02:00+00:00"
-        },
-        {
             "name": "sebastian/code-unit-reverse-lookup",
             "version": "1.0.1",
             "source": {
@@ -3874,7 +3652,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -4014,7 +3792,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -4067,7 +3845,7 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
@@ -4124,7 +3902,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -4188,7 +3966,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -4295,7 +4073,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -4445,16 +4223,16 @@
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.1.1",
+            "version": "2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-debug.git",
-                "reference": "632929c0682c6470ec838cf15d14c22418e6d07f"
+                "reference": "27e36a045069e6e195a28cd4314b6e125ddcc0f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/632929c0682c6470ec838cf15d14c22418e6d07f",
-                "reference": "632929c0682c6470ec838cf15d14c22418e6d07f",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/27e36a045069e6e195a28cd4314b6e125ddcc0f9",
+                "reference": "27e36a045069e6e195a28cd4314b6e125ddcc0f9",
                 "shasum": ""
             },
             "require": {
@@ -4498,7 +4276,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2019-03-30T20:33:53+00:00"
+            "time": "2019-04-30T15:21:32+00:00"
         },
         {
             "name": "yiisoft/yii2-faker",
@@ -4597,49 +4375,6 @@
                 "yii2"
             ],
             "time": "2019-03-17T19:23:15+00:00"
-        },
-        {
-            "name": "yurkinx/yii2-image",
-            "version": "v1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yurkinx/yii2-image.git",
-                "reference": "590795d0e94c909c636cba1007a619012e118ac9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yurkinx/yii2-image/zipball/590795d0e94c909c636cba1007a619012e118ac9",
-                "reference": "590795d0e94c909c636cba1007a619012e118ac9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "yiisoft/yii2": "*"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-0": {
-                    "yii\\image\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Yuri Kileev",
-                    "email": "kileev@gmail.com"
-                }
-            ],
-            "description": "Yii2 extension for image manipulating using Kohana Image Library.",
-            "homepage": "https://github.com/yurkinx/yii2-image",
-            "keywords": [
-                "extension",
-                "image",
-                "yii2"
-            ],
-            "time": "2019-01-25T01:01:48+00:00"
         }
     ],
     "aliases": [],

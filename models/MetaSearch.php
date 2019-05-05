@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Meta;
+use app\models\meta;
 
 /**
- * MetaSearch represents the model behind the search form of `app\models\Meta`.
+ * MetaSearch represents the model behind the search form of `app\models\meta`.
  */
-class MetaSearch extends Meta
+class MetaSearch extends meta
 {
     /**
      * {@inheritdoc}
@@ -18,7 +18,7 @@ class MetaSearch extends Meta
     {
         return [
             [['id'], 'integer'],
-            [['title', 'description', 'key_words'], 'safe'],
+            [['alias', 'title', 'description', 'key_words'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class MetaSearch extends Meta
      */
     public function search($params)
     {
-        $query = Meta::find();
+        $query = meta::find();
 
         // add conditions that should always apply here
 
@@ -61,7 +61,8 @@ class MetaSearch extends Meta
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title])
+        $query->andFilterWhere(['like', 'alias', $this->alias])
+            ->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'description', $this->description])
             ->andFilterWhere(['like', 'key_words', $this->key_words]);
 

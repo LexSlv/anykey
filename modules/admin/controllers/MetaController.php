@@ -3,14 +3,14 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
-use app\models\Meta;
+use app\models\meta;
 use app\models\MetaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * MetaController implements the CRUD actions for Meta model.
+ * MetaController implements the CRUD actions for meta model.
  */
 class MetaController extends Controller
 {
@@ -30,7 +30,7 @@ class MetaController extends Controller
     }
 
     /**
-     * Lists all Meta models.
+     * Lists all meta models.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class MetaController extends Controller
     }
 
     /**
-     * Displays a single Meta model.
+     * Displays a single meta model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,13 +58,13 @@ class MetaController extends Controller
     }
 
     /**
-     * Creates a new Meta model.
+     * Creates a new meta model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Meta();
+        $model = new meta();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -76,7 +76,7 @@ class MetaController extends Controller
     }
 
     /**
-     * Updates an existing Meta model.
+     * Updates an existing meta model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +96,7 @@ class MetaController extends Controller
     }
 
     /**
-     * Deletes an existing Meta model.
+     * Deletes an existing meta model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -110,15 +110,15 @@ class MetaController extends Controller
     }
 
     /**
-     * Finds the Meta model based on its primary key value.
+     * Finds the meta model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Meta the loaded model
+     * @return meta the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Meta::findOne($id)) !== null) {
+        if (($model = meta::findOne($id)) !== null) {
             return $model;
         }
 

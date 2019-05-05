@@ -28,9 +28,9 @@ class Meta extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title'], 'required'],
+            [['title','alias'], 'required'],
             [['description', 'key_words'], 'string'],
-            [['title'], 'string', 'max' => 250],
+            [['title','alias'], 'string', 'max' => 250],
         ];
     }
 

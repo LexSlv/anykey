@@ -18,7 +18,7 @@ class StartPageSearch extends StartPage
     {
         return [
             [['id', 'is_active'], 'integer'],
-            [['date_create', 'background', 'video', 'go_away_link'], 'safe'],
+            [['title','date_create', 'background', 'video', 'go_away_link'], 'safe'],
         ];
     }
 

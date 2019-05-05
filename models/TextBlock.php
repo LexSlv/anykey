@@ -29,7 +29,7 @@ class TextBlock extends \yii\db\ActiveRecord
         return [
             [['alias'], 'required'],
             [['text'], 'string'],
-            [['alias'], 'string', 'max' => 12],
+            [['alias'], 'string', 'max' => 250],
             [['alias'], 'unique'],
         ];
     }

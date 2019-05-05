@@ -12,12 +12,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'alias')->textInput([
-            'maxlength' => true,
-            'link_text' => $this->string(250)->notNull(),
-            'url' => $this->string(450)->notNull()
-
-    ]) ?>
+    <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'text')->textarea(['rows' => 6]) ?>
 

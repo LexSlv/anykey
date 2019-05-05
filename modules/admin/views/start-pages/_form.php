@@ -23,6 +23,8 @@ use dosamigos\datepicker\DatePicker;
             'format' => 'yyyy-m-d'
         ]
     ]);?>
+    <br>
+    <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'background')->textInput(['maxlength' => true]) ?>
 

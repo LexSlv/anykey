@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Meta */
+/* @var $model app\models\meta */
 
 $this->title = 'Create Meta';
 $this->params['breadcrumbs'][] = ['label' => 'Metas', 'url' => ['index']];

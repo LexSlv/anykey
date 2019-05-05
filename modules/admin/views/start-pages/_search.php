@@ -17,13 +17,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
+    <?= $form->field($model, 'title') ?>
+
     <?= $form->field($model, 'date_create') ?>
 
     <?= $form->field($model, 'background') ?>
 
     <?= $form->field($model, 'video') ?>
 
-    <?= $form->field($model, 'go_away_link') ?>
+    <?= $form->field($model, 'is_active') ?>
 
     <?php // echo $form->field($model, 'is_active') ?>
 

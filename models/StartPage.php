@@ -31,7 +31,7 @@ class StartPage extends \yii\db\ActiveRecord
     {
         return [
             [['date_create'], 'safe'],
-            [['background'], 'required'],
+            [['background','title'], 'required'],
             [['is_active'], 'integer'],
             [['background'], 'string', 'max' => 250],
             [['video', 'go_away_link'], 'string', 'max' => 500],
@@ -45,6 +45,7 @@ class StartPage extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'title' => 'title',
             'date_create' => 'Date Create',
             'background' => 'Background',
             'video' => 'Video',
