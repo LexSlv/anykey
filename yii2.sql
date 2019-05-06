@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.3
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.2:3306
--- Время создания: Май 06 2019 г., 14:41
--- Версия сервера: 5.7.20
--- Версия PHP: 7.2.0
+-- Хост: 127.0.0.1:3306
+-- Время создания: Май 06 2019 г., 20:31
+-- Версия сервера: 5.7.19
+-- Версия PHP: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -235,6 +235,7 @@ CREATE TABLE `works` (
   `date_create` date DEFAULT NULL,
   `image` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
+  `is_active` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `key_words` text NOT NULL,
@@ -247,10 +248,10 @@ CREATE TABLE `works` (
 -- Дамп данных таблицы `works`
 --
 
-INSERT INTO `works` (`id`, `date_create`, `image`, `alias`, `title`, `description`, `key_words`, `team`, `videos`, `images`) VALUES
-(3, '2019-05-01', '/web/uploads/works/anykey.kz-Landslide1549455087-preview.png', 'first', 'first', 'first', 'first', '[{\"name\":\"q1\",\"position\":\"q2\"},{\"name\":\"q3\",\"position\":\"das\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"}]', 'first', 'first'),
-(4, '2019-05-15', '/web/uploads/works/anykey.kz-DaddyCanDoIt1556190055-preview.jpg', 'second2', 'second', 'second', 'second', '[{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"}]', 'second', 'second'),
-(6, '2019-05-01', '/web/uploads/works/anykey.kz-DaddyCanDoIt1556190055-preview.jpg', 'third', '111', '222', '333', '[{\"name\":\"q1\",\"position\":\"q1\"},{\"name\":\"q2\",\"position\":\"q2\"},{\"name\":\"q3\",\"position\":\"qqq4\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"}]', '[{\"title\":\"qqq\",\"video_link\":\"q1\",\"after_text_block\":\"1\"},{\"title\":\"qqq1\",\"video_link\":\"q2\"},{\"title\":\"www\",\"video_link\":\"www222\",\"after_text_block\":\"1\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"}]', '[\"111\",\"22\",\"33\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]');
+INSERT INTO `works` (`id`, `date_create`, `image`, `alias`, `is_active`, `title`, `description`, `key_words`, `team`, `videos`, `images`) VALUES
+(3, '2020-05-01', '/web/uploads/works/anykey.kz-Landslide1549455087-preview.png', 'first', 1, 'Первый проект', 'first', 'first', '[{\"name\":\"McDonald\\u2019s Kazakhstan\",\"position\":\"Client\"},{\"name\":\"TBWA\",\"position\":\"Agency\"},{\"name\":\"Malik Zenger\",\"position\":\"Director\"},{\"name\":\"Vladimir Ushakov\",\"position\":\"DoP\"},{\"name\":\"Andrey Rasputin\",\"position\":\"Producer\"},{\"name\":\"Kirill Roshin<br \\/>Yerkebulan Kurishbayev\",\"position\":\"Linear producer\"},{\"name\":\"Evgenya Moreva\",\"position\":\"1st AD\"},{\"name\":\"Dilshat Chorukov\",\"position\":\"Editing\"},{\"name\":\"Erlan Tanaev\",\"position\":\"Color grading\"},{\"name\":\"Leonid Pak\",\"position\":\"CG\"},{\"name\":\"Cast.kz\",\"position\":\"Casting\"},{\"name\":\"Alexandra Shagai\",\"position\":\"Production designer\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"}]', '[{\"title\":\"VASSA&Co. - MADE YOURSELF!\",\"video_link\":\"https:\\/\\/player.vimeo.com\\/video\\/229674125?title=0&byline=0&portrait=0\"},{\"title\":\"Behind The Scenes\",\"video_link\":\"https:\\/\\/player.vimeo.com\\/video\\/229674125?title=0&byline=0&portrait=0\",\"after_text_block\":\"1\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"}]', '[\"\\/web\\/uploads\\/works\\/anykey.kz-Landslide1549455087-preview.png\",\"\\/web\\/uploads\\/works\\/anykey.kz-Landslide1549455087-preview.png\",\"\\/web\\/uploads\\/works\\/anykey.kz-Landslide1549455087-preview.png\",\"\\/web\\/uploads\\/works\\/anykey.kz-Landslide1549455087-preview.png\",\"\\/web\\/uploads\\/works\\/anykey.kz-Landslide1549455087-preview.png\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]'),
+(4, '2019-05-15', '/web/uploads/works/anykey.kz-DaddyCanDoIt1556190055-preview.jpg', 'second2', 1, 'second', 'second', 'second', '[{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"}]', '[{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"}]', '[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]'),
+(6, '2019-05-01', '/web/uploads/works/anykey.kz-DaddyCanDoIt1556190055-preview.jpg', 'third', 0, '111', '222', '333', '[{\"name\":\"q1\",\"position\":\"q1\"},{\"name\":\"q2\",\"position\":\"q2\"},{\"name\":\"q3\",\"position\":\"qqq4\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"}]', '[{\"title\":\"qqq\",\"video_link\":\"q1\",\"after_text_block\":\"1\"},{\"title\":\"qqq1\",\"video_link\":\"q2\"},{\"title\":\"www\",\"video_link\":\"www222\",\"after_text_block\":\"1\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"}]', '[\"111\",\"22\",\"33\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]');
 
 -- --------------------------------------------------------
 
@@ -345,55 +346,46 @@ ALTER TABLE `works_imgs`
 --
 ALTER TABLE `locations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT для таблицы `menu`
 --
 ALTER TABLE `menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
 --
 -- AUTO_INCREMENT для таблицы `meta`
 --
 ALTER TABLE `meta`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT для таблицы `start_page`
 --
 ALTER TABLE `start_page`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT для таблицы `team`
 --
 ALTER TABLE `team`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT для таблицы `text_blocks`
 --
 ALTER TABLE `text_blocks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
 --
 -- AUTO_INCREMENT для таблицы `works`
 --
 ALTER TABLE `works`
   MODIFY `id` int(22) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT для таблицы `works_imgs`
 --
 ALTER TABLE `works_imgs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

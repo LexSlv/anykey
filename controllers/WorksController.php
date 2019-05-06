@@ -13,7 +13,7 @@ class WorksController extends \yii\web\Controller
         Yii::$app->view->params['description'] = $meta['description'];
         Yii::$app->view->params['keywords'] = $meta['key_words'];
 
-        $works = Works::find()->orderBy('date_create DESC')->all();
+        $works = Works::find()->orderBy('date_create DESC')->where(['is_active'=>'1'])->all();
 
         return $this->render('index', compact('works'));
     }

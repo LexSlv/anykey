@@ -23,7 +23,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title') ?>
 
-    <?= $form->field($model, 'description') ?>
+    <?= $form->field($model, 'is_active') ?>
 
     <?php // echo $form->field($model, 'key_words') ?>
 

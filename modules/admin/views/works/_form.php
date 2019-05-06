@@ -47,6 +47,9 @@ use dosamigos\datepicker\DatePicker;
     <br>
     <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
+
+        <?= $form->field($model, 'is_active')->checkbox() ?>
+
     </div>
 
 

@@ -8,7 +8,7 @@
             <h3><?= $work['title'] ?></h3>
             <div>
                 <a href="">Quick Play</a>
-                <a href="">Full project</a>
+                <a href="/project?alias=<?= $work['alias'] ?>">Full project</a>
             </div>
         </div>
         <?php endforeach; ?>
