@@ -30,8 +30,9 @@ class Locations extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'big_image', 'small_image1', 'small_image2', 'small_image3'], 'required'],
+            [['title', 'big_image', 'small_image1', 'small_image2', 'small_image3', 'position'], 'required'],
             [['title', 'big_image', 'small_image1', 'small_image2', 'small_image3'], 'string', 'max' => 250],
+            [['position'], 'integer']
         ];
     }
 
@@ -47,6 +48,7 @@ class Locations extends \yii\db\ActiveRecord
             'small_image1' => 'Small Image1',
             'small_image2' => 'Small Image2',
             'small_image3' => 'Small Image3',
+            'Position' => 'Position',
         ];
     }
 }

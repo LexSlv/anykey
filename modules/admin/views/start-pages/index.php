@@ -29,7 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             'date_create',
-            'background',
+            [
+                'attribute' => 'background',
+                'format' => 'html',
+                'label' => 'img',
+                'value' => function ($data) {
+                    return '<img src="'.$data['background'].'" style="width:150px;">';
+                },
+            ],
             //'video',
             //'go_away_link',
             'is_active',

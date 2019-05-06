@@ -1,19 +1,22 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <aside class="main-sidebar">
-    <section class="sidebar">
+    <section class="sidebar"><i class="fas fa-star"></i>
         <?= dmstr\widgets\Menu::widget(
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
-                    //['label' => 'Menu:', 'options' => ['class' => 'header']],
-                    ['label' => 'Text blocks', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/text-blocks']],
-                    ['label' => 'Team', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/team']],
-                    ['label' => 'Meta', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/meta']],
-                    ['label' => 'Menu', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/menu']],
-                    ['label' => 'Locations', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/locations']],
-                    ['label' => 'Start page', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/start-pages']],
-                    ['label' => 'Works', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/works/']],
-                    ['label' => 'Works images', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/works-imgs/']],
+                    ['label' => 'Settings:', 'options' => ['class' => 'header']],
+                    ['label' => 'Text blocks', 'icon' => 'fas fa-file-alt"', 'url' => ['/admin/text-blocks']],
+                    ['label' => 'Content:', 'options' => ['class' => 'header']],
+                    ['label' => 'Menu', 'icon' => 'fas fa-bars', 'url' => ['/admin/menu']],
+                    ['label' => 'Meta tags', 'icon' => 'fas fa-code', 'url' => ['/admin/meta']],
+                    ['label' => 'Pages:', 'options' => ['class' => 'header']],
+                    ['label' => 'Start page', 'icon' => 'fas fa-star', 'url' => ['/admin/start-pages']],
+                    ['label' => 'About', 'icon' => 'fas fa-address-card', 'url' => ['/admin/team']],
+                    ['label' => 'Locations', 'icon' => 'fas fa-compass', 'url' => ['/admin/locations']],
+                    ['label' => 'Works', 'icon' => 'fas fa-fire-alt', 'url' => ['/admin/works/']],
+                    ['label' => 'Images:', 'options' => ['class' => 'header']],
+                    ['label' => 'Load works prev. image', 'icon' => 'fas fa-images', 'url' => ['/admin/works-imgs/']],
                     /*
                     ['label' => 'News', 'icon' => 'fas fa-newspaper', 'url' => ['/admin/news']],
                     ['label' => 'About', 'icon' => 'fas fa-feather', 'url' => ['/admin/news']],

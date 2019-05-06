@@ -7,9 +7,9 @@ use yii\data\ActiveDataProvider;
 use app\models\Locations;
 
 /**
- * Locaton represents the model behind the search form of `app\models\Locations`.
+ * LocationsSearch represents the model behind the search form of `app\models\Locations`.
  */
-class Locaton extends Locations
+class LocationsSearch extends Locations
 {
     /**
      * {@inheritdoc}
@@ -17,7 +17,7 @@ class Locaton extends Locations
     public function rules()
     {
         return [
-            [['id'], 'integer'],
+            [['id', 'position'], 'integer'],
             [['title', 'big_image', 'small_image1', 'small_image2', 'small_image3'], 'safe'],
         ];
     }
@@ -59,13 +59,12 @@ class Locaton extends Locations
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'position' => $this->position,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'big_image', $this->big_image])
-            ->andFilterWhere(['like', 'small_image1', $this->small_image1])
-            ->andFilterWhere(['like', 'small_image2', $this->small_image2])
-            ->andFilterWhere(['like', 'small_image3', $this->small_image3]);
+            ->andFilterWhere(['like', 'position', $this->position]);
 
         return $dataProvider;
     }

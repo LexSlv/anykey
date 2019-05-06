@@ -72,7 +72,7 @@ class WorksImgsController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
 
             $model->img = UploadedFile::getInstance($model, 'img');
-            Image::resize($model->img->tempName, 400, null)->save('uploads/works/' . $model->img->baseName . '.' . $model->img->extension);
+            Image::resize($model->img->tempName, 570, null)->save('uploads/works/' . $model->img->baseName . '.' . $model->img->extension);
             $model->save(false);
 
             return $this->redirect(['view', 'id' => $model->id]);
@@ -95,7 +95,7 @@ class WorksImgsController extends Controller
         $model = $this->findModel($id);
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->img = UploadedFile::getInstance($model, 'img');
-            Image::resize($model->img->tempName, 400, null)->save('uploads/works/' . $model->img->baseName . '.' . $model->img->extension);
+            Image::resize($model->img->tempName, 570, null)->save('uploads/works/' . $model->img->baseName . '.' . $model->img->extension);
             $model->save(false);
 
             return $this->redirect(['view', 'id' => $model->id]);
@@ -115,13 +115,13 @@ class WorksImgsController extends Controller
      */
     public function actionDelete($id)
     {
-        if (($model = WorksImgs::findOne($id)) !== null) {
-            return $model;
+        if(file_exists(Yii::$app->basePath . '/web/uploads/works/' . $this->findModel($id)->img)){
+            unlink(Yii::$app->basePath . '/web/uploads/works/' . $this->findModel($id)->img);
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        $this->findModel($id)->delete();
+        return $this->redirect(['index']);
     }
-
 
     /**
      * Finds the WorksImgs model based on its primary key value.

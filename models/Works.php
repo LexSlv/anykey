@@ -36,6 +36,7 @@ class Works extends \yii\db\ActiveRecord
             [['image', 'alias', 'title', 'description', 'key_words', 'team', 'videos', 'images'], 'required'],
             [['description', 'key_words', 'team', 'videos', 'images'], 'string'],
             [['image', 'alias', 'title'], 'string', 'max' => 255],
+            [['date_create'], 'safe'],
         ];
     }
 
@@ -46,6 +47,7 @@ class Works extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'date_create'=>'date_create',
             'image' => 'Image',
             'alias' => 'Alias',
             'title' => 'Title',

@@ -29,7 +29,7 @@ AppAsset::register($this);
     <meta name="keywords" content="<?= Html::encode($this->params['keywords']) ?>"/>
     <?php $this->registerLinkTag([
         'rel' => 'stylesheet',
-        'href' => 'css/main.css',
+        'href' => '/css/main.css',
     ]); ?>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

@@ -66,7 +66,13 @@ class WorksController extends Controller
     {
         $model = new Works();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $request = Yii::$app->request->post();
+            $model->team = json_encode($request['Works']['team']);
+            $model->videos = json_encode($request['Works']['videos']);
+            $model->images = json_encode($request['Works']['images']);
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -84,9 +90,16 @@ class WorksController extends Controller
      */
     public function actionUpdate($id)
     {
+
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $request = Yii::$app->request->post();
+            $model->team = json_encode($request['Works']['team']);
+            $model->videos = json_encode($request['Works']['videos']);
+            $model->images = json_encode($request['Works']['images']);
+            $model->save();
+
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

@@ -21,9 +21,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'big_image') ?>
 
-    <?= $form->field($model, 'small_image1') ?>
-
-    <?= $form->field($model, 'small_image2') ?>
+    <?= $form->field($model, 'position') ?>
 
     <?php // echo $form->field($model, 'small_image3') ?>
 

@@ -4,7 +4,7 @@ namespace app\modules\admin\controllers;
 
 use Yii;
 use app\models\Locations;
-use app\models\Locaton;
+use app\models\LocationsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,7 +35,7 @@ class LocationsController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new Locaton();
+        $searchModel = new LocationsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

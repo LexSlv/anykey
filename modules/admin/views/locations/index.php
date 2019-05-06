@@ -28,10 +28,15 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'title',
-            'big_image',
-            'small_image1',
-            'small_image2',
-            //'small_image3',
+            [
+                'attribute' => 'big_image',
+                'format' => 'html',
+                'label' => 'big_image',
+                'value' => function ($data) {
+                    return '<img src="'.$data['big_image'].'" style="width:200px;">';
+                },
+            ],
+            'position',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

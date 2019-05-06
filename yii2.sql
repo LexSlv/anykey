@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.3
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Май 05 2019 г., 22:20
--- Версия сервера: 5.7.19
--- Версия PHP: 7.1.7
+-- Хост: 127.0.0.2:3306
+-- Время создания: Май 06 2019 г., 14:41
+-- Версия сервера: 5.7.20
+-- Версия PHP: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,16 +34,17 @@ CREATE TABLE `locations` (
   `big_image` varchar(250) NOT NULL,
   `small_image1` varchar(250) NOT NULL,
   `small_image2` varchar(250) NOT NULL,
-  `small_image3` varchar(250) NOT NULL
+  `small_image3` varchar(250) NOT NULL,
+  `position` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `locations`
 --
 
-INSERT INTO `locations` (`id`, `title`, `big_image`, `small_image1`, `small_image2`, `small_image3`) VALUES
-(1, 'MOUNTAINS', '/web/uploads/img/l2.png', '/web/uploads/img/l2_1.png', '/web/uploads/img/l2_2.png', '/web/uploads/img/l2_3.png'),
-(2, 'CANYONS', '/web/uploads/img/l3.png', '/web/uploads/img/l3_1.png', '/web/uploads/img/l3_2.png', '/web/uploads/img/l3_3.png');
+INSERT INTO `locations` (`id`, `title`, `big_image`, `small_image1`, `small_image2`, `small_image3`, `position`) VALUES
+(1, 'MOUNTAINS', '/web/uploads/img/l2.png', '/web/uploads/img/l2_1.png', '/web/uploads/img/l2_2.png', '/web/uploads/img/l2_3.png', 2),
+(2, 'CANYONS', '/web/uploads/img/l3.png', '/web/uploads/img/l3_1.png', '/web/uploads/img/l3_2.png', '/web/uploads/img/l3_3.png', 1);
 
 -- --------------------------------------------------------
 
@@ -92,7 +93,8 @@ INSERT INTO `meta` (`id`, `alias`, `title`, `description`, `key_words`) VALUES
 (2, 'locations', 'locations', 'locations', 'locations'),
 (3, 'contacts', 'contacts', 'contacts', 'contacts'),
 (4, 'services', 'services', 'services', 'services'),
-(5, 'about', 'about', 'about', 'about');
+(5, 'about', 'about', 'about', 'about'),
+(6, 'works', 'works', 'works', 'works');
 
 -- --------------------------------------------------------
 
@@ -230,6 +232,7 @@ INSERT INTO `text_blocks` (`id`, `alias`, `text`) VALUES
 
 CREATE TABLE `works` (
   `id` int(22) NOT NULL,
+  `date_create` date DEFAULT NULL,
   `image` varchar(255) NOT NULL,
   `alias` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -244,8 +247,10 @@ CREATE TABLE `works` (
 -- Дамп данных таблицы `works`
 --
 
-INSERT INTO `works` (`id`, `image`, `alias`, `title`, `description`, `key_words`, `team`, `videos`, `images`) VALUES
-(1, 'Chrysanthemum.jpg', '11', '22', '33', '44', '55', '66', '77');
+INSERT INTO `works` (`id`, `date_create`, `image`, `alias`, `title`, `description`, `key_words`, `team`, `videos`, `images`) VALUES
+(3, '2019-05-01', '/web/uploads/works/anykey.kz-Landslide1549455087-preview.png', 'first', 'first', 'first', 'first', '[{\"name\":\"q1\",\"position\":\"q2\"},{\"name\":\"q3\",\"position\":\"das\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"}]', 'first', 'first'),
+(4, '2019-05-15', '/web/uploads/works/anykey.kz-DaddyCanDoIt1556190055-preview.jpg', 'second2', 'second', 'second', 'second', '[{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"}]', 'second', 'second'),
+(6, '2019-05-01', '/web/uploads/works/anykey.kz-DaddyCanDoIt1556190055-preview.jpg', 'third', '111', '222', '333', '[{\"name\":\"q1\",\"position\":\"q1\"},{\"name\":\"q2\",\"position\":\"q2\"},{\"name\":\"q3\",\"position\":\"qqq4\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"},{\"name\":\"\",\"position\":\"\"}]', '[{\"title\":\"qqq\",\"video_link\":\"q1\",\"after_text_block\":\"1\"},{\"title\":\"qqq1\",\"video_link\":\"q2\"},{\"title\":\"www\",\"video_link\":\"www222\",\"after_text_block\":\"1\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"},{\"title\":\"\",\"video_link\":\"\"}]', '[\"111\",\"22\",\"33\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]');
 
 -- --------------------------------------------------------
 
@@ -263,9 +268,8 @@ CREATE TABLE `works_imgs` (
 --
 
 INSERT INTO `works_imgs` (`id`, `img`) VALUES
-(1, '1'),
-(2, '1'),
-(3, 'Chrysanthemum.jpg');
+(5, 'anykey.kz-Landslide1549455087-preview.png'),
+(6, 'anykey.kz-DaddyCanDoIt1556190055-preview.jpg');
 
 --
 -- Индексы сохранённых таблиц
@@ -341,46 +345,55 @@ ALTER TABLE `works_imgs`
 --
 ALTER TABLE `locations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT для таблицы `menu`
 --
 ALTER TABLE `menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT для таблицы `meta`
 --
 ALTER TABLE `meta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT для таблицы `start_page`
 --
 ALTER TABLE `start_page`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT для таблицы `team`
 --
 ALTER TABLE `team`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT для таблицы `text_blocks`
 --
 ALTER TABLE `text_blocks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT для таблицы `works`
 --
 ALTER TABLE `works`
-  MODIFY `id` int(22) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(22) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT для таблицы `works_imgs`
 --
 ALTER TABLE `works_imgs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;COMMIT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
